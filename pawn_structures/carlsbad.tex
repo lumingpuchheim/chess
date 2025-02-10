@@ -1,0 +1,55 @@
+The Carlsbad pawn structure is a well-known pawn structure that can arise from many different openings Nimzo-Indian, Caro-Kann, Scandinavian, and multiple other queen's pawn openings and is full of rich possibilities for both sides. 
+
+\newchessgame[
+id=A,
+moveid=1w,
+setwhite={pa2, pb2, pd4, pe3, pf2, pg2, ph2},
+addblack={pa7, pb7, pc6, pd5, pf7, pg7, ph7}]
+\chessboard
+
+\minisec{Queen's Gambit Declined}
+\newgame
+\newchessgame[
+id=A,
+moveid=1w]
+\mainline{1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 Be7 6.e3 c6}
+
+\chessboard
+
+\minisec{Caro-Kann Exchange Variation}
+\newgame
+\newchessgame[
+id=A,
+moveid=1w]
+\mainline{1.e4 c6 2.d4 d5 3.exd5 cxd5 4.Nf3 Nc6 5.Bd3 Bg4 6.c3 e6}
+
+\chessboard
+
+In this position, Black has reached the Carlsbad pawn structure. In fact, this is an almost identical position as the Queen's Gambit Declined Exchange Variation, just with colors reversed. If we remove all of the pieces, the Carlsbad pawn structure appears again.
+
+\minisec{White Plans}
+\begin{itemize}
+    \item{Minority Attack}
+
+    The purpose of the minority attack is to split Black’s a7-b7-c6-d5 pawn chain into additional pawn islands (with bxc6 bxc6, or ...cxb5) and create weaknesses in Black’s pawn structure. (You may notice, for instance, that Black has a backward c-pawn after the exchange on c6 or an isolated d5-pawn when the c6-pawn trades for the b5-pawn).
+    \item{Central Play with f3, e4}
+
+    This plan is typically less effective with the knight on f3. Usually, White would prefer to have the knight on e2 and the pawn on f3 so that when e4 is played, he can meet ...dxe4 with fxe4 to have two pawns in the centre (rather than being saddled with an isolated pawn after Nxe4). However, this plan can still work when Black misplaced his pieces in response to one of our other plans.
+\end{itemize}    
+
+\minisec{Black's Key Ideas}
+\begin{itemize}
+    \item{Control e4 Square}
+
+    Controlling e4 square keeps White from playing central e4 break. Typical moves are \symqueen e7, \symrook ae8. 
+    \item{Knight manoeuvre \symknight b8-d7-b6-c4(c8)-d6}
+
+    The knight on d6 parries White's minonity attack on b5 and central break on e4. It also protects the potential weak pawn on b7 after the the b-file opens.
+
+    \item{Counter Attack on King Side}
+    When time allows, Black can also play f5-f4. 
+    
+\end{itemize} 
+
+
+
