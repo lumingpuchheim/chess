@@ -1,0 +1,41 @@
+\documentclass{article}
+% Note: you only need to load xskak,
+% not the skak or chessboard packages.
+\usepackage{xskak}
+\xskakset{style=styleB}
+
+\usepackage[explicit]{titlesec}
+\usepackage{hyperref}
+
+\titleclass{\minisec}{straight}[\paragraph]
+
+\newcounter{miniseB}
+
+% Change 0pt to a positive value once the representation for the counter has been established
+\titleformat{\minisec}[hang]
+  {\normalsize\bfseries}{\theminisec}{0pt}{#1}
+\titlespacing*{\minisec}
+  {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\newcommand{\minisecautorefname}{minisec}
+
+% minisecs will be numebered
+\setcounter{secnumdepth}{5}
+% minisecs won't appear in the ToC
+\setcounter{tocdepth}{4}
+
+% Provisional empty definition for the counter representation
+\renewcommand\theminisec{}
+
+% Settings for the bookmarks and the ToC entries (change the second 
+% and third arguments of \@dottedtocline if minisecs should go to the ToC)
+\makeatletter
+  \def\toclevel@minisec{5}
+  \def\l@minisec{\@dottedtocline{5}{3.8em}{3.2em}}
+\makeatother
+
+\begin{document}
+\input{kings_indian_defence_mar_del_plata}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
