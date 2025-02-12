@@ -7,6 +7,9 @@ all:
 	@for dir in $(TEX_DIRS); do \
 		echo "Compiling in $$dir"; \
 		( cd "$$dir" && pdflatex -interaction nonstopmode main.tex > /dev/null 2>&1 || true ); \
+		( cd "$$dir" && bibtex main || true); \
+		( cd "$$dir" && pdflatex -interaction nonstopmode main.tex > /dev/null 2>&1 || true ); \
+		( cd "$$dir" && pdflatex -interaction nonstopmode main.tex > /dev/null 2>&1 || true ); \
 	done
 
 clean:
