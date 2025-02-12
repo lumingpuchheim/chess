@@ -1,0 +1,16 @@
+Thinking schematically means that you don't look at specific moves, but instead just imagine which position you want to reach. When you have found your dream position, you can then try to find the moves to reach it. 
+This thinking technique is useful since it prevents you from getting lost in many different variations and gives you a clear position you want to reach.
+
+\minisec{Alois Wotawa, 1935}
+\newchessgame[
+id=A,
+moveid=1w,
+setwhite={pf2, pf3, pg4, ra6, kh2},
+addblack={pf4, pg5, pg6, ph3, kh4, rh7}]
+
+\chessboard
+
+It’s clear that white has to get at black’s king to win this game. The question is how?
+The most obvious way is to bring white’s rook onto the h-file, but that is currently covered. Another way would be Ra1-Rg1-Rg3, but black can prevent this: \variation{1.Ra1 Rb7 2.Rg1 Rb2} and white cannot recapture with the pawn after Rg3.
+
+So through schematic thinking we noticed that black’s rook is perfectly placed so white can put black into zugzwang: \mainline{1.Ra8 Rh6 2.Ra1! Rh7 3.Rg1 Rb7 4.Rg3 fxg3 5.fxg3#}
