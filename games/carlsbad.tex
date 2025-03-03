@@ -1,0 +1,272 @@
+% ..\ideas\minority_attack
+% ..\ideas\breakthrough_f3_e4
+
+I was never so happy to play a game. Sometimes I anticpated Marius's intention, Sometimes
+I had to face unexpected moves. 
+
+I have learned a lot during the following correspondence game. During the game I also met 
+Marius face to face. He told me he had to break his head to find the best move.  
+
+One can consider complex system as different layers, one on top of the other.  In chess,
+moves are the bottom layer, strategy the top layer and other knowledge in between. A player
+must think on the correct layer to think the problem through. Thinking in moves only
+like a computer is tiring. Quite often, a player is calculating on long but irrelevant
+variations. Visualizing such a variation is not only time consuming but also not
+effective. 
+
+During the our game was playing, in Germany there was a Freestyle Chess Grandprix. The 
+current world champion Gukesh was not doing well, because he calculated too much. The
+winner, Vicent Keymer often took his time to think of a strategy on move one.
+
+I try to write down what I thought during the game and after the game. 
+These thinkings will be criticized by computer marked as "Post postmortem" to see 
+where I can improve.
+
+\minisec{Ming - Marius, 2025}
+
+\newchessgame[
+id=main,
+moveid=1w,
+% fischer=692
+setwhite={pa2, pb2, pc2, pd2, pe2, pf2, pg2, ph2, ra1, nb1, nc1, kd1, qe1, bf1, bg1, rh1},
+addblack={pa7, pb7, pc7, pd7, pe7, pf7, pg7, ph7, ra8, nb8, nc8, kd8, qe8, bf8, bg8, rh8},
+storefen=start]
+
+This was a correspondence game. Each part had at most 3 days for one move. The document is being written as the game is still on going.
+
+Chess960, also known as Fischer Random Chess, is a chess variant that randomizes the starting position of the pieces on the back rank. It was introduced by former world chess champion Bobby Fischer in 1996 to reduce the emphasis on opening preparation and to encourage creativity in play.
+
+Chess was a nostagia for me. In my high school time I have learned chess in school, as the coach taught us the theory about chess and the pupils played each other afterwards. I was older than most of the kids who started earlier. 
+Once in a rapid tournament I beat a favorite in the first round with classical Bxh7 after setting up d4-e5 center sacrifice in a Nimzowitsch Indian game. My opponent played fast and was focusing on pawn hunting
+on the queenside with b6 Na5 Ba6 targeting my c4 pawn. I have setup the center with e3, f3, e4, fxe4 like the ex world champion Botvinnik. During the game I haven't calculated
+a lot because these were the formulae for me and I haven't met any unknown position. The sacrifice went as planned. After ...Kh8 Ng5 then Qh5, I have won material few moves later. 
+
+Later when I went to university and visited my teacher again, I saw my opponent's name on her desk. Alas, I should have greeted him. 
+
+The whole story above just illustrates calculation doesn't play a big role with good knowledge. I was adopting schematic thinking unconciously. Thinking schematically means that you don’t look at specific moves, but
+instead just imagine which position you want to reach. When you have found
+your dream position, you can then try to find the moves to reach it. This
+thinking technique is useful since it prevents you from getting lost in many
+different variations and gives you a clear position you want to reach.
+
+\chessboard
+
+I should have paid more attention to the opening position like Vicent Keymer. The position is quite similar
+to the standard one, with a knight and a bishop swapped and the king and the queen. Such a problem with the 
+bishop and the knight can be corrected with \symknight e2 and \symbishop e3. After castling we would
+believe we were playing normal chess. 
+
+Oh, of course the pawn on b7 is weak, but attacking it with g3 and \symbishop g2 Black can simply parry with c6. Then what? 
+I am reluctant to play f4 to activate the dark square bishop because it weakens the king side. 
+
+Playing chess960, it is helpful to think schematically how to place the pawns and the pieces before making the first move. Again and again I felt my pieces are not in harmony just because of my mistake in my first move.
+Grandmaster Peter Leko tells his student Vicent Keymer ``You have no right to rush", I can't agree more.
+
+Back to the position, how did I want to place my pieces during the game? We as human beings are willing to play good chess, accepting that we cannot calculate as a computer. Long calculation
+is in most cases wrong can leads definitively to fatigue which means blunders later. In an opening, it is always crucial to activate the pieces. Beginning from the bishops on the kingside. With e4, f3/f4 both the bishops
+are activated. The light square bishop should go to c4, outside the pawn chain. An Italian-like opening was appealing to me. Bishop on c4, pawn on d3, e4, f3. Castling on kingside would be ideal so that the rook can also
+be activated. 
+
+I am aware now that the plan was not ideal because it the pawn strucuture d3, e4, f3 is not ideal at all. Once the dark square bishop is exchanged, I will have huge problems on the dark square. It almost happened in the 
+game.
+
+I would have a different plan now. 
+
+\newchessgame[
+id=A,
+moveid=1w,
+% fischer=692]
+setwhite={pa2, pb2, pc2, pc2, pd4, pe4, pf3, pg2, ph2, ra1, nc3, qd2, kd1, be3, ne2, be3, bf1, rh1}
+]
+
+\chessboard
+
+
+Once we have a schematic idea, we can find out the moves. \variation{1. d4} is superial to \variation{1. e4} because it stops \variation{1...e5}.
+I am also aware of the fact that the plan needs to change because of Black's moves. As in a negotiation, one asks his maximum, the other negotiates.
+
+[Post postmortem] The engine considers \variation{1. d4} as good as \variation{1. e4}. To \variation{1. d4}, Black could respond
+with \variation{1...f5!} Dutch defense, prevent White from playing \variation{2. e4}.
+
+\newchessgame[
+id=main,
+moveid=1w,
+% fischer=692]
+restorefen=start
+]
+
+During the game, I had not thought through, the plan was not ideal.
+
+\mainline{1. e4 e5 2. Bc4 } 
+
+As I have planned, I was willing to play Italian opening. 
+
+[Post postmortem] Such a move loses 0.5 point in the evaluation. \symknight c3 is better. Of course
+I don't have access to any chess engine during a game. A useful heuristic would be at the beginning,
+it is better to play forced moves to gain tempi. 
+
+\mainline{2...Nd6!?}
+
+\chessboard
+
+The first surprise. The beshop was being attacked and I had to move it to b3. 
+I didn't reckon this move during the game because it stops the dark square bishop from developing. 
+
+\mainline{3. Bb3 f6}
+
+\chessboard
+
+Maybe forced, otherwise the g8 bishop cannot be developed. Luckily, a natural development move \symbishop c4 also keeps Black from developing. 
+I reckon this only when I am annotating the game.
+
+[Post postmortem] The computer recommends \variation{3...f5! 4. exf5 Nc6 5. Nc3 Nxf5}. Black has a better development 
+
+\mainline{4. Nc3?!} 
+
+During the game I refused to exchange, just because I believed I should keep the position complicated. I expected Black would castle on the queenside. If Black exchanged on b3, 
+I would have an open a-file for attack. 
+
+I should have exchange on g8. My bad light square bishop was doing nothing. Exchanging it would give Black weaknesses
+in light square, which I can exploit with for example \symknight c3 and \symknight d5.
+
+[Post postmortem] The comment above is correct. The computer says Black can answer with zwischenzug \variation{4...Qg6! 5. Qf1 Rxg8 6. d3}.
+
+\mainline{4... Nc6 5. f3 Be6 6. N1e2 O-O-O}
+
+I didn't like this move during the game, because a7 was weak and under fire. However, I also failed to take advantage of this move.
+
+[Post postmortem] My feeling was correct. See the next move.
+
+\chessboard
+
+\mainline{7. d3? } 
+
+A lazy move. In the past I have lost so many games because I have taken actions prematurely. That was why I decided to play carefully. 
+e4 pawn was already protected so there was no reason to play d3. In the future, I could push the d-pawn to d4 to save a tempo.
+
+I should have played \variation{7. Be3} and then \variation{8. Qf2}
+to activate my rook on h1 finally.
+
+I have mentioned before the a7 pawn was weak. It was protected only by knight on c6. I could have played \variation{9. Ba4} threatening
+to take the knight on c6. Pawn storm with a4 will follow. h1 rook can be activated with O-O. All my pieces are involved in an attack.
+
+[Post postmortem] the conclusion that d3 is lazy is correct. So is the idea regarding the a7 is correct. The move \variation{7. Be3} is not.
+The problem is, such a move is too slow. Black can strike with \variation{7...Nc4 8. Bxc4 Bxc4 9. Qf2 d5}. Note a7 pawn is protected 
+tactically because of \variation{10...b6 } and the bishop is trapped.
+
+A more energetic move is \variation{7. d4}. After \variation{7...exd4 8. Nxd4 Nxd4 9. Bxd4 Kb8 10. O-O-O} White has more space.
+
+A further reflection: it is harsh to tell the move \variation{7. d4} lazy. During the game I was reading <Python Strategy> by
+former world champion Tigran Petrosian, who is famous for his prophylaxis. I realized that I have lost too many games
+because of I was too hasty. The price for prophylaxis is that sometimes I miss some opportunities.
+
+\mainline{7...Qg6} 
+
+A good practical move. Marius is attacking my g2 pawn. I have to defend it.
+
+\chessboard
+
+\mainline{8. Qf2?}
+
+During the game, I was lured to attack the a7 pawn. It is usually better to place the queen in the front of the bishop. 
+However after the text move, my bishop stuck on g1 forever and so is my rook on h1. Only my queen and bishop on 
+g1 are active for the attack. How can this be successful?
+
+\chessboard
+
+Now all my pieces are active and ready for an attack on the kingside. The rook on h1 can join the attack via the open d-file or the h-file after a pawn push.
+
+\symqueen f1 would have been better. Afterwards I could still develop with \symbishop e3. 
+
+[Post postmortem] The computer is however ok with the text move. It also approves \variation{8. Qf1 f5 9. O-O-O Bxb3 10. axb3 Be7 11. Kb1 Rhf8 12. Be3}.
+Such a game would be more playable for me because I can activate my rook on h1. I am happy that my postmortem was correct.
+
+\mainline{8...Kb8}
+
+Protect the a7 pawn. Such a move must be played sooner or later, because in most cases, the king is safer on b8 than on c8, a7 is
+protected. One may call this move "prophylaxis".
+
+\chessboard
+
+
+
+\mainline{9.d4? } 
+
+I regret this move. I thought suddently it was time to strike but look at my pieces:
+rook on h1 is still doing nothing. There are too few pieces involved in the attack.
+
+I should have tried \symbishop a4, then \symbishop xc6, a4, a5, \symknight a4 attacking b6.
+I believe this plan didn't occur to me. It would be worthy of a try because Marius must find a defence since my threat is straightforward.
+
+\emph{I have learned by the way to win a game, I must allow my opponent to make mistakes by giving him the opportunity with lots of options.
+In the past I paid to much attention to calculate the best move. A very tiring process with very little reward.}
+
+[Post postmortem] The comment above is wrong. The plan may sound good but it is too slow. Black can play for example \variation{9...Nc8 10. Bxc6 dxc6 11. a4 Qh6} 
+This is the danger of a wrong plan. a7 pawn is protected by knight on c8. Black doesn't need to protect it by playing b6, weakening its own
+pawn structure. 
+
+\mainline{9...exd4 10. Nxd4 Nxd4 11. Qxd4 b6 12. Qf2 Nc4} 
+
+\chessboard
+
+Oops, I didn't see this move. Suddenly the Black pieces are active.
+
+
+\mainline{ 13. O-O-O Bc5 14. Qe2 Qg5+ 15. Kb1 Ne3} 
+During the game I was not happy at the beginning, some moves ago I had some more space and in this 
+position I had to think how to parry Black's threat. 
+
+[Post postmortem] The computer says this moves lost two points in the evaluation. Black should have played \variation{15...Bxg1 16. Rxg1 Qc5 15. Rge1}
+giving White some advantage. However, I don't see how to proceed with White.
+
+\chessboard
+We return to the game: 
+\mainline{16. Qa6}
+
+During the game I was quite happy with this move. I believed this must be a surprise for Black. Black could of course
+not take the rook on e1 because of the threat 17. \symknight b5.
+
+[Post postmortem] The computer says the text move loses one point (+2 to +1). White should have played 
+\variation{16. Re1  Bxb3 17. axb3 Nxg2 18. h4 Qg6 19. Qa6} Black has a loose knight on g2, he must parry the threat that White
+takes on c5 and pin with \symrook hg1. Therefore \variation{ 19...f5 20. Re2 Nf4 21. Bh2 Nxe2 22. Nb5 Qc6 23. Bxc7} White wins material.
+
+
+\chessboard
+
+I agree I should have found a better move. However I doubt if I could have seen the sequences above. 
+The problem with \variation{16. Qa6} is it loses a tempo later. Tempo is an important currency in chess. Losing a tempo 
+is in most cases bad.
+
+\chessboard
+
+We have made some best moves:
+\mainline{16...c6 17. Bxe3 Bxe3 18. Rd3 Bxb3 19. axb3}
+
+
+
+\chesboard
+
+During the game I calculated \variation{19...Qxg2 20. Rhd1 Bf4 21. Na4} intending to play \variation{22. Nxb6}. 
+When necessary White could also play b4, \symrook{Ra3}, all the pieces are attacking. Afterwards \variation{21...Qg5 22. Nxb6 axb6 23. Qxb6}
+
+To visualize the position is hard. To estimate it even harder. White gives up one piece for more pawns. Black has an exposed king. White should
+have some advantage.
+
+\chessboard
+
+[Post postmortem] The computer shows some interesting lines:
+\variation{23...Kc8 24. Qa6+ Kc7 25. Rxd7+! Rxd7 26. Qa7 Kc8 27. Rxd7} 
+
+Let's go back to the game.
+
+\chessboard
+
+\mainline{19...d6}
+
+I understood the motivation. Black wanted to protect his pawn on d7 by doubling rooks on the d-file. 
+
+\mainline{20. Rhd1 Bc5 21. Qa4 Kb7 22. b4 Bc5
+23. Qa5 Bb6 24. Qa2 Rd7 25. Qe6 Rhd8 26. g3 Qe5 27. Qxe5 fxe5 28. Ne2 Kc7 29. f4 d5 30. exd5 Rxd5 31. Rxd5 Rxd5 32. Rxd5 cxd5 33. fxe5 a5
+34. bxa5 Bxa5 35. Nd4 b4 36. Ne6+ Kd7 37. Nxg7 Bc7 38. e6+ Ke7 39. Nf5+ Kxe6 40. Nd4+ Kf6 41. Ka2 Bd6 42. Kb3 h5 43. Nc6 Kg5 44. Nxb4 Bxb4 45. Kxb4 Kg4 46. Kc5 Kh3 47. b4}
+
+\chessboard
